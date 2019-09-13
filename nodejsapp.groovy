@@ -15,7 +15,7 @@ pipeline
 							//checkout([$class: 'GitSCM', branches: [[name: "nodejsapp"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: "https://github.com/ankushpatil601/nodejsapp.git/nodejsapp"]]])
                           				sh """
 							ls -ltr
-							sudo docker build .
+							docker build .
 							"""
 						}
                     }    
