@@ -13,9 +13,16 @@ pipeline
 						script
 						{
 							//checkout([$class: 'GitSCM', branches: [[name: "nodejsapp"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: "https://github.com/ankushpatil601/nodejsapp.git/nodejsapp"]]])
-                          				sh """
+                          			docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+						def app = docker.build("vmgponly/docker-nodejs-demo:latest", '.').push()
+						}
+							
+							
+							
+							
+							sh """
 							ls -ltr
-							docker build .
+							#docker build .
 							"""
 						}
                     }    
