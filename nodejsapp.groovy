@@ -13,7 +13,7 @@ pipeline
 						script
 						{
 							//checkout([$class: 'GitSCM', branches: [[name: "nodejsapp"]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: "https://github.com/ankushpatil601/nodejsapp.git/nodejsapp"]]])
-                           ls -ltr
+                          				sh "ls -ltr"
 						}
                     }    
                 }
