@@ -18,6 +18,9 @@ pipeline
 							//sh " whoami "
 							docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
 						//def app = docker.build("nodeapp/docker-nodejs-demo:latest", '.').push()
+								sh """
+								docker build .
+								""""
 							//sh 'sudo docker login -u "ankushpa" -p "@nkush2019"  https://registry-1.docker.io/v2/'
 						}
 							
@@ -27,7 +30,7 @@ pipeline
 							
 							ls -ltr
 							#docker
-							docker build .
+							#docker build .
 							
 							"""
 						}
