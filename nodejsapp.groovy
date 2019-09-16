@@ -17,7 +17,7 @@ pipeline
 							//sh " cat /home/jenkins/.dockercfg "
 							//docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
 						//def app = docker.build("nodeapp/docker-nodejs-demo:latest", '.').push()
-							sh 'docker login -u "ankushpa" PASSWORD "@nkush2019"  https://index.docker.io/v1/'
+							sh 'docker login -u "ankushpa" -p "@nkush2019"  https://index.docker.io/v1/'
 						//}
 							
 							
