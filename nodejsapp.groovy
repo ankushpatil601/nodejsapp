@@ -20,19 +20,12 @@ pipeline
 						//def app = docker.build("nodeapp/docker-nodejs-demo:latest", '.').push()
 								sh """
 								docker build .
-								""""
+								"""
 							//sh 'sudo docker login -u "ankushpa" -p "@nkush2019"  https://registry-1.docker.io/v2/'
 						}
 							
-										
+												
 							
-							sh """
-							
-							ls -ltr
-							#docker
-							#docker build .
-							
-							"""
 						}
                     }    
                 }
