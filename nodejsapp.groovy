@@ -1,4 +1,4 @@
-pipeline 
+ipeline 
 	{
 		agent any	 
 		
@@ -17,7 +17,7 @@ pipeline
 							//sh " cat /home/jenkins/.dockercfg "
 							docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
 							def app = docker.build("ankushpa/nodeapp:18", '.').push()
-							docker run -p 8080:8080 ankushpa/nodeapp	
+							app.run( -p 8080:8080 nodeapp )
 								
 							//sh 'sudo docker login -u "ankushpa" -p "@nkush2019"  https://registry-1.docker.io/v2/'
 						}
