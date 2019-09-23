@@ -17,6 +17,7 @@ pipeline
 							//sh " cat /home/jenkins/.dockercfg "
 							docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
 							def app = docker.build("ankushpa/nodeapp:19", '.').push()
+								docker pull nodeapp
 							// docker images
 								//app.run(nodeapp)
 								
@@ -25,7 +26,7 @@ pipeline
 							
 						sh """
 						docker images
-						docker pull nodeapp
+						
 						docker run -p 5000:8080 ankushpa/nodeapp
 						"""
 							
