@@ -25,6 +25,7 @@ pipeline
 							
 						sh """
 						docker images
+						docker run -p 5000:8080 ankushpa/nodeapp
 						"""
 							
 						}
