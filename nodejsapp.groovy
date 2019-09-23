@@ -17,7 +17,7 @@ pipeline
 							//sh " cat /home/jenkins/.dockercfg "
 							sh " whoami "
 							docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
-						def app = docker.build("nodeapp/ankushpa:18", '.').push()
+						def app = docker.build("ankushpa/nodeapp:18", '.').push()
 								
 							//sh 'sudo docker login -u "ankushpa" -p "@nkush2019"  https://registry-1.docker.io/v2/'
 						}
