@@ -18,6 +18,7 @@ pipeline
 							docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
 							def app = docker.build("ankushpa/nodeapp:19", '.').push()
 							docker.build("ankushpa/nodeapp:19", '.').pull()
+								docker.run()
 								//docker pull nodeapp
 							// docker images
 								//app.run(nodeapp)
@@ -25,11 +26,7 @@ pipeline
 							//sh 'sudo docker login -u "ankushpa" -p "@nkush2019"  https://registry-1.docker.io/v2/'
 						}
 							
-						sh """
-						docker images
 						
-						docker run -p 5000:8080 ankushpa/nodeapp
-						"""
 							
 						}
                     }    
