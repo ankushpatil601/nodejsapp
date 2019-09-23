@@ -19,7 +19,7 @@ pipeline
 							def app = docker.build("ankushpa/nodeapp:19", '.')
 								app.push()
 								app.pull()
-								app.run()
+								sh "docker run -p 5000:8080 ankushpa/nodeapp:19"
 								//docker pull nodeapp
 							// docker images
 								//app.run(nodeapp)
